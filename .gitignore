@@ -1,2 +1,3 @@
-/target
+target/
+.vscode/
 .goutputstream-N8GUM1
