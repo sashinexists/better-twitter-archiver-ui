@@ -195,6 +195,7 @@ impl Sandbox for App {
             Snapshot::Tweetview(tweet) => Container::new(view_tweet(&tweet)),
             _ => Container::new(Text::new("Display failed")),
         };
+
         Scrollable::new(&mut self.scroll)
             .padding(15)
             .width(iced::Length::Fill)
