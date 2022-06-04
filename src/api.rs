@@ -1,4 +1,4 @@
-use ::reqwest;
+use reqwest;
 
 use ron;
 
