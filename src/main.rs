@@ -1,4 +1,4 @@
-use iced::pure::widget::{Button, Column, Text};
+use iced::pure::widget::{Button, Column, Row, Text};
 use iced::pure::{button, column, container, row, scrollable, text, Application, Element};
 use iced::{alignment, executor, Alignment, Color, Command, Length, Settings};
 use twitter_v2::{Tweet, User};
@@ -17,7 +17,7 @@ struct App {
 #[derive(Debug, Clone)]
 
 enum Message {
-    DisplayTweet(Tweet),
+    DisplayTweet(Tweet), //you might want to get rid of this, or change display conversation to this
     DisplayUser(User),
     DisplayConversation(Tweet),
     Back,
@@ -78,7 +78,7 @@ impl Application for App {
                 Command::none()
             }
             Message::Forward => {
-                self.index -= 1;
+                self.index += 1;
                 Command::none()
             }
         }
@@ -89,13 +89,13 @@ impl Application for App {
         let view_content = match present {
             Snapshot::TweetView(tweet) => row().push(view_tweet(&tweet)),
             Snapshot::UserView(user) => row().push(view_user_tweets(&user)),
-            //Snapshot::ConversationView(tweet) => view_conversation(&tweet),
-            _ => row().push(text("Display failed")),
+            Snapshot::ConversationView(tweet) => row().push(view_conversation(&tweet)),
         };
         container(scrollable(
             column()
                 .align_items(Alignment::Center)
                 .width(Length::Units(700))
+                .push(view_navigation())
                 .push(view_content),
         ))
         .style(style::App)
@@ -125,7 +125,7 @@ fn view_tweet<'a>(tweet: &Tweet) -> Button<'a, Message> {
     .style(style::Tweet)
     .width(Length::Fill)
     .padding(20)
-    .on_press(Message::DisplayTweet(tweet.clone()))
+    .on_press(Message::DisplayConversation(tweet.clone()))
 }
 
 fn view_tweet_author_name<'a>(user: &User) -> Text {
@@ -169,4 +169,64 @@ fn view_user_timeline_title(user: &User) -> Text {
         .size(30)
         .width(Length::Fill)
         .horizontal_alignment(iced::alignment::Horizontal::Center)
+}
+
+fn view_conversation<'a>(tweet: &Tweet) -> Column<'a, Message> {
+    let mut conversation = api::get_conversation_by_tweet_id(tweet.id.as_u64());
+    if conversation.len() > 1 {
+        conversation.reverse();
+        column()
+            .push(view_conversation_title(tweet))
+            .push(view_tweets(&conversation))
+            .spacing(25)
+    } else {
+        column()
+            .push(view_tweet_title(&tweet))
+            .push(view_tweet(tweet))
+    }
+}
+
+fn view_conversation_title(tweet: &Tweet) -> Text {
+    let user = api::get_user_by_id(
+        tweet
+            .author_id
+            .expect("Failed to get tweet's author id")
+            .as_u64(),
+    );
+    text(format!(
+        "Conversation containing @{}'s tweet posted on {}",
+        user.username,
+        get_tweet_created_datetime_string(&tweet)
+    ))
+    .size(30)
+    .width(Length::Fill)
+    .horizontal_alignment(iced::alignment::Horizontal::Center)
+}
+
+fn view_tweet_title(tweet: &Tweet) -> Text {
+    let user = api::get_user_by_id(tweet.author_id.expect("Failed to parse tweet id").as_u64());
+    text(format!(
+        "Tweet by @{} posted at {}",
+        user.username,
+        get_tweet_created_datetime_string(tweet)
+    ))
+    .size(30)
+    .width(Length::Fill)
+    .horizontal_alignment(iced::alignment::Horizontal::Center)
+}
+
+fn view_navigation<'a>() -> Row<'a, Message> {
+    row()
+        .push(button("⬅").on_press(Message::Back))
+        .push(button("⮕").on_press(Message::Forward))
+}
+
+fn get_tweet_created_datetime_string(tweet: &Tweet) -> String {
+    let format = time::format_description::parse("[year]/[month]/[day] at [hour]:[minute]")
+        .expect("failed to get format");
+    tweet
+        .created_at
+        .expect("failed to parse date")
+        .format(&format)
+        .expect("Failed to format datetime")
 }

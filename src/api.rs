@@ -16,6 +16,16 @@ pub fn get_tweets_from_twitter_handle(twitter_handle: &str) -> Vec<Tweet> {
         .expect("Failed to parse @{twitter_handle}'s tweets data into Rusty Object Notation")
 }
 
+pub fn get_conversation_by_tweet_id(id: u64) -> Vec<Tweet> {
+    let resp = reqwest::blocking::get(format!("http://127.0.0.1:4001/conversation/{id}"))
+        .expect("failed to get conversation ending in tweet of id {id}");
+    let conversation_ron_str = resp
+        .text()
+        .expect("failed to parse text from @{twitter_handle}'s tweets");
+    ron::from_str(&conversation_ron_str)
+        .expect("Failed to parse conversation ending in tweed of id {}'s tweets data into Rusty Object Notation")
+}
+
 pub fn get_tweet_by_id(id: u64) -> Tweet {
     let resp = reqwest::blocking::get(format!("http://127.0.0.1:4001/tweet/{id}"))
         .expect("failed to get tweet");
