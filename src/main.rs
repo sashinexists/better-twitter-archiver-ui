@@ -31,6 +31,11 @@ enum Snapshot {
     ConversationView(Tweet),
 }
 
+fn reset_model_history(model: &mut Vec<Snapshot>, index: usize) -> Vec<Snapshot> {
+    model.truncate(index + 1);
+    model.clone()
+}
+
 impl Application for App {
     type Message = Message;
     type Executor = executor::Default;
@@ -59,16 +64,19 @@ impl Application for App {
     fn update(&mut self, message: Message) -> Command<Message> {
         match message {
             Message::DisplayTweet(tweet) => {
+                self.model = reset_model_history(&mut self.model, self.index);
                 self.model.push(Snapshot::TweetView(tweet));
                 self.index += 1;
                 Command::none()
             }
             Message::DisplayUser(user) => {
+                self.model = reset_model_history(&mut self.model, self.index);
                 self.model.push(Snapshot::UserView(user));
                 self.index += 1;
                 Command::none()
             }
             Message::DisplayConversation(tweet) => {
+                self.model = reset_model_history(&mut self.model, self.index);
                 self.model.push(Snapshot::ConversationView(tweet));
                 self.index += 1;
                 Command::none()
@@ -87,25 +95,65 @@ impl Application for App {
     fn view(&self) -> Element<Message> {
         let present = self.model[self.index].clone();
         let view_content = match present {
-            Snapshot::TweetView(tweet) => row().push(view_tweet(&tweet)),
-            Snapshot::UserView(user) => row().push(view_user_tweets(&user)),
-            Snapshot::ConversationView(tweet) => row().push(view_conversation(&tweet)),
+            Snapshot::TweetView(tweet) => render_tweet_view(self, &tweet),
+            Snapshot::UserView(user) => render_user_view(self, &user),
+            Snapshot::ConversationView(tweet) => render_conversation_view(self, &tweet),
         };
         container(scrollable(
             column()
                 .align_items(Alignment::Center)
                 .width(Length::Units(700))
-                .push(view_navigation())
                 .push(view_content),
         ))
         .style(style::App)
         .width(Length::Fill)
         .height(Length::Fill)
         .align_x(alignment::Horizontal::Center)
-        .align_y(alignment::Vertical::Center)
+        //.align_y(alignment::Vertical::Center)
         .max_width(100)
         .padding(20)
         .into()
+    }
+}
+
+fn render_user_view<'a>(app: &App, user: &User) -> Row<'a, Message> {
+    row().push(
+        column()
+            .push(view_user_timeline_title(&user))
+            .push(view_navigation(app))
+            .push(row().push(view_user_tweets(&user)))
+            .spacing(10),
+    )
+}
+
+fn render_tweet_view<'a>(app: &App, tweet: &Tweet) -> Row<'a, Message> {
+    row().push(
+        column()
+            .push(view_tweet_title(&tweet))
+            .push(view_navigation(app))
+            .push(row().push(view_tweet(&tweet)))
+            .spacing(10),
+    )
+}
+
+fn render_conversation_view<'a>(app: &App, tweet: &Tweet) -> Row<'a, Message> {
+    let mut conversation = api::get_conversation_by_tweet_id(tweet.id.as_u64());
+    if conversation.len() > 1 {
+        row().push(
+            column()
+                .push(view_conversation_title(&tweet))
+                .push(view_navigation(app))
+                .push(view_conversation(&mut conversation))
+                .spacing(10),
+        )
+    } else {
+        row().push(
+            column()
+                .push(view_tweet_title(&tweet))
+                .push(view_navigation(app))
+                .push(view_tweet(&tweet))
+                .spacing(10),
+        )
     }
 }
 
@@ -157,7 +205,6 @@ fn view_tweets<'a>(tweets: &Vec<Tweet>) -> Column<'a, Message> {
 
 fn view_user_tweets<'a>(user: &User) -> Column<'a, Message> {
     column()
-        .push(row().push(view_user_timeline_title(user)))
         .push(row().push(view_tweets(&api::get_tweets_from_twitter_handle(
             &user.username,
         ))))
@@ -171,19 +218,9 @@ fn view_user_timeline_title(user: &User) -> Text {
         .horizontal_alignment(iced::alignment::Horizontal::Center)
 }
 
-fn view_conversation<'a>(tweet: &Tweet) -> Column<'a, Message> {
-    let mut conversation = api::get_conversation_by_tweet_id(tweet.id.as_u64());
-    if conversation.len() > 1 {
-        conversation.reverse();
-        column()
-            .push(view_conversation_title(tweet))
-            .push(view_tweets(&conversation))
-            .spacing(25)
-    } else {
-        column()
-            .push(view_tweet_title(&tweet))
-            .push(view_tweet(tweet))
-    }
+fn view_conversation<'a>(conversation: &mut Vec<Tweet>) -> Column<'a, Message> {
+    conversation.reverse();
+    column().push(view_tweets(&conversation)).spacing(25)
 }
 
 fn view_conversation_title(tweet: &Tweet) -> Text {
@@ -215,10 +252,38 @@ fn view_tweet_title(tweet: &Tweet) -> Text {
     .horizontal_alignment(iced::alignment::Horizontal::Center)
 }
 
-fn view_navigation<'a>() -> Row<'a, Message> {
+fn view_navigation<'a>(app: &App) -> Row<'a, Message> {
+    let is_back_button_active: bool = app.index > 0;
+    let is_forward_button_active: bool = app.index < app.model.len() - 1;
     row()
-        .push(button("⬅").on_press(Message::Back))
-        .push(button("⮕").on_press(Message::Forward))
+        .push(view_navigation_button(
+            "Back",
+            Message::Back,
+            is_back_button_active,
+        ))
+        .push(view_navigation_button(
+            "Forward",
+            Message::Forward,
+            is_forward_button_active,
+        ))
+        .spacing(20)
+}
+
+fn view_navigation_button<'a>(
+    label: &str,
+    action: Message,
+    is_active: bool,
+) -> Button<'a, Message> {
+    if is_active {
+        button(text(label).size(15))
+            .on_press(action)
+            .padding(8)
+            .style(style::NavButton)
+    } else {
+        button(text(label).size(15))
+            .padding(8)
+            .style(style::NavButtonInactive)
+    }
 }
 
 fn get_tweet_created_datetime_string(tweet: &Tweet) -> String {
