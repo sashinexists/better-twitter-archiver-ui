@@ -20,11 +20,12 @@ enum Message {
     DisplayTweet(Tweet), //you might want to get rid of this, or change display conversation to this
     DisplayUser(User),
     DisplayConversation(Tweet),
+    Home,
     Back,
     Forward,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 enum Snapshot {
     TweetView(Tweet),
     UserView(User),
@@ -81,6 +82,12 @@ impl Application for App {
                 self.index += 1;
                 Command::none()
             }
+            Message::Home => {
+                self.model = reset_model_history(&mut self.model, self.index);
+                self.model.push(self.model[0].clone());
+                self.index += 1;
+                Command::none()
+            }
             Message::Back => {
                 self.index -= 1;
                 Command::none()
@@ -109,7 +116,6 @@ impl Application for App {
         .width(Length::Fill)
         .height(Length::Fill)
         .align_x(alignment::Horizontal::Center)
-        //.align_y(alignment::Vertical::Center)
         .max_width(100)
         .padding(20)
         .into()
@@ -255,6 +261,7 @@ fn view_tweet_title(tweet: &Tweet) -> Text {
 fn view_navigation<'a>(app: &App) -> Row<'a, Message> {
     let is_back_button_active: bool = app.index > 0;
     let is_forward_button_active: bool = app.index < app.model.len() - 1;
+    let is_home_button_active: bool = app.model[app.index] != app.model[0];
     row()
         .push(view_navigation_button(
             "Back",
@@ -265,6 +272,11 @@ fn view_navigation<'a>(app: &App) -> Row<'a, Message> {
             "Forward",
             Message::Forward,
             is_forward_button_active,
+        ))
+        .push(view_navigation_button(
+            "Home",
+            Message::Home,
+            is_home_button_active,
         ))
         .spacing(20)
 }
@@ -282,7 +294,7 @@ fn view_navigation_button<'a>(
     } else {
         button(text(label).size(15))
             .padding(8)
-            .style(style::NavButtonInactive)
+            .style(style::NavButton)
     }
 }
 

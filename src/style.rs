@@ -1,6 +1,9 @@
 use crate::theme;
-use iced::pure::widget::{button, container};
 
+use iced::pure::{
+    scrollable,
+    widget::{button, container, scrollable},
+};
 pub struct App;
 
 impl container::StyleSheet for App {
@@ -39,8 +42,8 @@ pub struct NavButton;
 impl button::StyleSheet for NavButton {
     fn active(&self) -> button::Style {
         button::Style {
-            background: theme::CONTENT_BG_COLOR.into(),
-            text_color: theme::MAIN_TEXT_COLOR.into(),
+            background: theme::BUTTON_BG_COLOR.into(),
+            text_color: theme::BUTTON_TEXT_COLOR.into(),
             border_radius: 10.0,
             ..button::Style::default()
         }
@@ -49,21 +52,16 @@ impl button::StyleSheet for NavButton {
     fn hovered(&self) -> button::Style {
         button::Style {
             text_color: theme::MAIN_TEXT_COLOR.into(),
-            background: theme::CONTENT_HIGHLIGHT_BG_COLOR.into(),
+            background: theme::BUTTON_HOVER_BG_COLOR.into(),
             ..self.active()
         }
     }
-}
 
-pub struct NavButtonInactive;
-
-impl button::StyleSheet for NavButtonInactive {
-    fn active(&self) -> button::Style {
+    fn disabled(&self) -> button::Style {
         button::Style {
-            background: theme::CONTENT_BG_COLOR.into(),
-            text_color: theme::CONTENT_BG_COLOR.into(),
-            border_radius: 10.0,
-            ..button::Style::default()
+            text_color: theme::BUTTON_TEXT_INACTIVE_COLOR.into(),
+            background: theme::BUTTON_BG_COLOR.into(),
+            ..self.active()
         }
     }
 }
