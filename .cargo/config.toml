@@ -1,0 +1,2 @@
+[target.aarch64-apple-darwin]
+linker = "/home/sashin/Documents/projects/better-twitter-archiver-ui/zcc"

@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/zig cc -target aarch64-macos $@
