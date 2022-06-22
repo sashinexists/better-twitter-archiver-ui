@@ -1,0 +1,1264 @@
+[
+    (
+        id: "1539218879137779713",
+        text: "I\'ve just returned from Bilbao, Spain, where they staged quite a show for the Laurates of the BBVA Frontiers of Knowledge Award. See https://t.co/93GgdfyxCB, and https://t.co/uL2iSJQTK2\nI will post a transcript of my acceptance speech later.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1539218879137779713"),
+        created_at: Some("2022-06-21T12:09:12Z"),
+    ),
+    (
+        id: "1539213765056823298",
+        text: "Please note, all Jew-haters deny that they are \"Jew-haters\" (even Linda Sarsour), while no Zionopnobe has ever denied having this uglier variant of the virus, thus making it easier to detect and irradicate. https://t.co/LGdz1yDFII",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1539213765056823298"),
+        created_at: Some("2022-06-21T11:48:53Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1539189534767841280",
+            ),
+        ]),
+    ),
+    (
+        id: "1539187271223562240",
+        text: "Rapists always argue that a woman\'s short skirt is responsible for her rape.\nOur panelists at Van Leer Institute are now claiming that its not her skirt, but her very body.  They\'re right: If Jews were not what they are at heart- lovers of Israel - there would be no antisemitism. https://t.co/Fz0iBrQuXJ",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1539187271223562240"),
+        created_at: Some("2022-06-21T10:03:36Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1538544561114464256",
+            ),
+        ]),
+    ),
+    (
+        id: "1539180167372820481",
+        text: "This smallpox example was my first exposure to the \"dark world of causation\", as related here: https://t.co/4gu19vPmzN https://t.co/YG11YEuFdf",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1539180167372820481"),
+        created_at: Some("2022-06-21T09:35:23Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1539094168257146880",
+            ),
+        ]),
+    ),
+    (
+        id: "1539149923223863298",
+        text: "RT @SAFECUNY: https://t.co/Tf0d81kkM1",
+        attachments: Some((
+            media_keys: Some([
+                "3_1539134839269490688",
+            ]),
+        )),
+        author_id: Some("3363584909"),
+        conversation_id: Some("1539149923223863298"),
+        created_at: Some("2022-06-21T07:35:12Z"),
+        referenced_tweets: Some([
+            (
+                type: retweeted,
+                id: "1539134855304433666",
+            ),
+        ]),
+    ),
+    (
+        id: "1539148717491507200",
+        text: "@HenMazzig If over 90% of Jews view Israel as the homeland of the Jewish people, what\'s the point in whining \"antisemitism\" instead of protesting an uglier form of racism: Zionophobia.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1538989406018732034"),
+        created_at: Some("2022-06-21T07:30:24Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1538989406018732034",
+            ),
+        ]),
+    ),
+    (
+        id: "1539144255477669888",
+        text: "@Unesco own site on Masada is also worth visiting: https://t.co/8INgYnOnJP\nIt was inscribed as a World Heritage site in 2001,\nand has not been taken down yet, after Unesco decided (2016) to erase Jewish connections to the land. https://t.co/kw2NZU8sO5\nHurry! https://t.co/oXPwgoM03p",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1539144255477669888"),
+        created_at: Some("2022-06-21T07:12:41Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1538510877070176256",
+            ),
+        ]),
+    ),
+    (
+        id: "1538546946641641476",
+        text: "RT @Israel: Masada: The ancient fortress in Southern Israel and final stronghold where our Jewish ancestors stood bravely against the Roman…",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1538546946641641476"),
+        created_at: Some("2022-06-19T15:39:11Z"),
+        referenced_tweets: Some([
+            (
+                type: retweeted,
+                id: "1538510877070176256",
+            ),
+        ]),
+    ),
+    (
+        id: "1538545690896384003",
+        text: "RT @AdamMilstein: The NYPD has arrested two teenagers in connection with an assault on a Jewish man in Brooklyn last month during which the…",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1538545690896384003"),
+        created_at: Some("2022-06-19T15:34:12Z"),
+        referenced_tweets: Some([
+            (
+                type: retweeted,
+                id: "1538301790113959942",
+            ),
+        ]),
+    ),
+    (
+        id: "1538544562737754112",
+        text: "I would not confer academic credibility to people who signed the Van Leer  definition of antisemitism. Let history judge their thoughtlessness.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1538544561114464256"),
+        created_at: Some("2022-06-19T15:29:43Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1538544561114464256",
+            ),
+        ]),
+    ),
+    (
+        id: "1538544561114464256",
+        text: "Fighting antisemitism: \'Pound of flesh\' in 2022 is never enough - opinion https://t.co/r6yIi2KzBz",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1538544561114464256"),
+        created_at: Some("2022-06-19T15:29:42Z"),
+    ),
+    (
+        id: "1538524083846930434",
+        text: "@blakeflayton A culture that has produced no knowledge should not be mocked for trying to produce something.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1538202360161484801"),
+        created_at: Some("2022-06-19T14:08:20Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1538202360161484801",
+            ),
+        ]),
+    ),
+    (
+        id: "1537282320906035200",
+        text: "RT @GalitPeleg: Now that #COVID19 is almost behind us 🤞 it\'s time to improve our health systems. Today was the 1st day of \"Emergancy Manage…",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1537282320906035200"),
+        created_at: Some("2022-06-16T03:54:01Z"),
+        referenced_tweets: Some([
+            (
+                type: retweeted,
+                id: "1537048212258926593",
+            ),
+        ]),
+    ),
+    (
+        id: "1537281785813417984",
+        text: "RT @FundacionBBVA: Concierto extraordinario en homenaje a los galardonados en los XIV #PremiosFronteras del Conocimiento. \n\nhttps://t.co/Z3…",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1537281785813417984"),
+        created_at: Some("2022-06-16T03:51:53Z"),
+        referenced_tweets: Some([
+            (
+                type: retweeted,
+                id: "1537142009856663554",
+            ),
+        ]),
+    ),
+    (
+        id: "1535919096218300416",
+        text: "May his prediction match his knowledge of history. \n\"Make believe\" about the future is cute kids game, \"make believe\" about the past is hardly cute. https://t.co/LXOxZFtw7m",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535919096218300416"),
+        created_at: Some("2022-06-12T09:37:03Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1535818000187764736",
+            ),
+        ]),
+    ),
+    (
+        id: "1535913391629381633",
+        text: "RT @StateofTLV: “Everyone understands,” a senior diplomatic source explained to me recently, “that there’s nothing to do. The Palestinians…",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535913391629381633"),
+        created_at: Some("2022-06-12T09:14:23Z"),
+        referenced_tweets: Some([
+            (
+                type: retweeted,
+                id: "1535677053206396930",
+            ),
+        ]),
+    ),
+    (
+        id: "1535716779971858432",
+        text: "@charleswangb Every universal machine, be it cellular or no cellular, network or no-network, can simulate the do-operator if given the information about the underlying DAG. The issue is getting the DAG structure and knowing what to do with it when asked a question about actions and policies.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535691088396054529"),
+        created_at: Some("2022-06-11T20:13:07Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1535692272901029888",
+            ),
+        ]),
+    ),
+    (
+        id: "1535712878950371328",
+        text: "@BifarinTheFifth I love the beads on your hand, each singing a hymn to good taste!",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535672863646261249"),
+        created_at: Some("2022-06-11T19:57:37Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1535672886886793216",
+            ),
+        ]),
+    ),
+    (
+        id: "1535607970091765766",
+        text: "@terrible_archer @arya_amsha @ruchirsharma_1 I wasn\'t aware of such anti-Hindu sentiments in America. But I\'ve only been here 62 years.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535540836301082624"),
+        created_at: Some("2022-06-11T13:00:44Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1535564670324514816",
+            ),
+        ]),
+    ),
+    (
+        id: "1535496740136026113",
+        text: "@artistexyz @rspadim @amt_shrma @ylecun @GaryMarcus Do you think I would be able to understand what \"transformer\" is, given my limited vocabulary? You know what my limitations are, I start with a research question, I must know what information is provided in addition to the data, &amp; finally, what performance guarantees r needed.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533983530178314240"),
+        created_at: Some("2022-06-11T05:38:45Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1535457224935489537",
+            ),
+        ]),
+    ),
+    (
+        id: "1535442967883677697",
+        text: "@rspadim @amt_shrma This mapping will be very hard, because some regression folks do have a causal model in mind when the say \"regression,\" because that\'s all they can say, and some really have \"regression\" in mind and mean it.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533983530178314240"),
+        created_at: Some("2022-06-11T02:05:05Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1535413669357621249",
+            ),
+        ]),
+    ),
+    (
+        id: "1535385424184520704",
+        text: "RT @yudapearl: @AlJazeera: This is another Zionist pink-washing trick, to divert attention from Israel\'s blood drinking ceremony a few mile…",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535385424184520704"),
+        created_at: Some("2022-06-10T22:16:25Z"),
+        referenced_tweets: Some([
+            (
+                type: retweeted,
+                id: "1535376171826745345",
+            ),
+        ]),
+    ),
+    (
+        id: "1535376171826745345",
+        text: "@AlJazeera: This is another Zionist pink-washing trick, to divert attention from Israel\'s blood drinking ceremony a few miles away. https://t.co/5nnrcj6xBM",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535376171826745345"),
+        created_at: Some("2022-06-10T21:39:39Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1535292854876217349",
+            ),
+        ]),
+    ),
+    (
+        id: "1535368239076605952",
+        text: "An unbelievable visit, of historical significance. I wish I could say I had a part in conspiring to arrange it. Israel is the modern catalyst of co-existence.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535368238162333696"),
+        created_at: Some("2022-06-10T21:08:08Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1535368238162333696",
+            ),
+        ]),
+    ),
+    (
+        id: "1535368238162333696",
+        text: "A rare visit by Pakistanis to Israel has caused furor in Islamabad https://t.co/WJMz6nHWDO",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535368238162333696"),
+        created_at: Some("2022-06-10T21:08:08Z"),
+    ),
+    (
+        id: "1535363059379675136",
+        text: "Agree! Congressmen need love too. Especially for the courage it takes to remember Jerusalem in a Squad infected Congress. https://t.co/I59LIPi6Cv",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535363059379675136"),
+        created_at: Some("2022-06-10T20:47:33Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1535255786561196035",
+            ),
+        ]),
+    ),
+    (
+        id: "1535343946942935040",
+        text: "@GaryMarcus @slatestarcodex @MelMitchell1 @mmitchell_ai @timnitGebru @JanelleCShane @katecrawford @merbroussard @ErnestSDavis @ylecun Can we have a link to the main arena, where the punches are thrown among ideas?",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535279859131305984"),
+        created_at: Some("2022-06-10T19:31:36Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1535279859131305984",
+            ),
+        ]),
+    ),
+    (
+        id: "1535243464580902912",
+        text: "@mariotelfig @philipcball @newscientist It seems that this is the example I was looking for, many thanks . Now I need to swallow and digest.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535177966279217152"),
+        created_at: Some("2022-06-10T12:52:20Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1535232769701433344",
+            ),
+        ]),
+    ),
+    (
+        id: "1535239983161716742",
+        text: "@_fernando_rosas I\'m purposely trying to avoid man-made interventions which will open the door to all kind of \"free-will\" speculations.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535177966279217152"),
+        created_at: Some("2022-06-10T12:38:30Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1535237882314637313",
+            ),
+        ]),
+    ),
+    (
+        id: "1535206702944948224",
+        text: "@IntuitMachine Yes, this is the kind of example I am looking for, starting with ideal gas and proving that the atmospheric pressure (a macro variable) \"causes\" the barometer reading (also macro variable) and not the other way around. Here \"causes\" is defined by counting configurations.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535177966279217152"),
+        created_at: Some("2022-06-10T10:26:15Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1535202139881996288",
+            ),
+        ]),
+    ),
+    (
+        id: "1535204048655175681",
+        text: "@philipcball The reservations cited in your article merely express my inability to follow the arguments when all measures of causal strength are expressed as probabilities. My comments now beg for an example that goes from symmetrical \'=\' to asymmetrical \'---&gt;\', say earthquake to tsunami.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535194471461265413"),
+        created_at: Some("2022-06-10T10:15:42Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1535194471461265413",
+            ),
+        ]),
+    ),
+    (
+        id: "1535177968225378304",
+        text: "and related articles @ericphoel are too complex for me to follow, and are articulated in terms of causal vocabulary which should be avoided until the asymmetry emerges. (4) Would appreciate the simplest demonstration available, hopefully using classical deterministic systems.\n3/3",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535177966279217152"),
+        created_at: Some("2022-06-10T08:32:04Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1535177967428546560",
+            ),
+        ]),
+    ),
+    (
+        id: "1535177967428546560",
+        text: "we observe at the macroscopic level of discourse. (2) To demonstrate emergence, we need to show how a system of particles governed by \'=\' leads to an asymmetric relation ---&gt; among macro variables defined in terms of micro states. (3) The demonstrations I\'ve found in this  \n2/3",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535177966279217152"),
+        created_at: Some("2022-06-10T08:32:04Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1535177966279217152",
+            ),
+        ]),
+    ),
+    (
+        id: "1535177966279217152",
+        text: "Few comments on @philipcball article @newscientist. (1) That causation is an emergent property is indisputable. Both classical and quantum mechanics are governed by the symmetric equality sign \'=\' at the microscopic level, hence could not account for causal asymmetries \n1/3 https://t.co/Aejh9mWceC",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1535177966279217152"),
+        created_at: Some("2022-06-10T08:32:04Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1530248027759329280",
+            ),
+        ]),
+    ),
+    (
+        id: "1534975095948468224",
+        text: "Any U. of Toronto affiliates among our readers? As a fellow alumni (honorary Doctor, 2007) please convey to your Provost my appreciation for protecting the reputation of your/our university.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534975095034159104"),
+        created_at: Some("2022-06-09T19:05:55Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534975095034159104",
+            ),
+        ]),
+    ),
+    (
+        id: "1534975095034159104",
+        text: "University of Toronto to Withhold Thousands in Graduate Student Union Fees Over Israel Boycott https://t.co/jxqCmbH5yR",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534975095034159104"),
+        created_at: Some("2022-06-09T19:05:55Z"),
+    ),
+    (
+        id: "1534971767428526080",
+        text: "@HumzahAlkindi The journalists Hippocratic oath is not \"being found credible by both sides\" but \"showing the human face of both sides\". Since the latter is a prerequisite to \"normalization\", it is resisted by all anti-normalization forces, e.g. @AlJazeera, @en_emamkhomeini, @RashidaTlaib",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533214351590494208"),
+        created_at: Some("2022-06-09T18:52:42Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534889672073449472",
+            ),
+        ]),
+    ),
+    (
+        id: "1534885176144060416",
+        text: "@HumzahAlkindi By: \"Humanity not-shown is humanity denied\" I mean: A journalist that covers the ME for 25 yrs and does not once show any human aspect of Israeli society is, in effect, telling his/her readers that Israelis have no human qualities, hence, are  legitimate targets of assassinations",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533214351590494208"),
+        created_at: Some("2022-06-09T13:08:37Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534858628637032448",
+            ),
+        ]),
+    ),
+    (
+        id: "1534856613680381952",
+        text: "@HumzahAlkindi Her death occupies most/all of the discussion, not her journalistic credentials. I believe I was the only one to raise questions about the latter --\nstanding to be corrected.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533214351590494208"),
+        created_at: Some("2022-06-09T11:15:07Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534854616080609281",
+            ),
+        ]),
+    ),
+    (
+        id: "1534855070025543680",
+        text: "This linguistic transition has not been linear but circular, returning to the vocabulary of the Mufti in the 1920\'s who stated openly \"Not even the size of a postage stamp\". It was socially unacceptable for a while (after the Holocaust) but regained\nrespectability lately. https://t.co/bkZFoqWins",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534855070025543680"),
+        created_at: Some("2022-06-09T11:08:59Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1534553601846173701",
+            ),
+        ]),
+    ),
+    (
+        id: "1534847730224451584",
+        text: "Are people still doubting whether Twitter posts by Khemeni or Rashida Tlaib may be inspirational to \"resistance fighters\" such as Sirhan Sirhan? https://t.co/ZS9yTnba60",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534847730224451584"),
+        created_at: Some("2022-06-09T10:39:49Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1533811242049015810",
+            ),
+        ]),
+    ),
+    (
+        id: "1534840138810896384",
+        text: "A serious question indeed. We can joke about the mentality of @khamenei_ir and his ilk but, considering that he has 900K followers, each a potential killer, Twitter should seriously consider suspension. No one would be allowed to make such remarks on say Mexican nationals. https://t.co/qflQJuHfjs",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534840138810896384"),
+        created_at: Some("2022-06-09T10:09:39Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1534667791734808576",
+            ),
+        ]),
+    ),
+    (
+        id: "1534832453864411137",
+        text: "@HumzahAlkindi The question I raised was independent of the circumstances under which she died. Nothing justifies \"lethal force\", yet, a totally different  question is whether she was a \"reporter\" or a \"propagandist\". I am separating the two issues, why confound them?",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533214351590494208"),
+        created_at: Some("2022-06-09T09:39:07Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534811979847974912",
+            ),
+        ]),
+    ),
+    (
+        id: "1534829790444007424",
+        text: "A second list of newly published paper touching on causal inference is compiled here:\n https://t.co/JnlZGyB2vy\nI hope to continue on a weekly basis. https://t.co/f5cTGFkU4y",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534829790444007424"),
+        created_at: Some("2022-06-09T09:28:32Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1533983530178314240",
+            ),
+        ]),
+    ),
+    (
+        id: "1534805596548911104",
+        text: "@rjherber @memarkelliottme I am not a Rabbi, true, but I preach that Judaism is \"peoplehood first and religion second\". As Ruth said: Amech Ami V\'Elohayich Elohay (Your people is my people and you God is my God). Namely, once I become part of your people, accepting your G-d will be easy.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534715590404845568"),
+        created_at: Some("2022-06-09T07:52:24Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534765200879931393",
+            ),
+        ]),
+    ),
+    (
+        id: "1534804084171018240",
+        text: "@memarkelliottme @razingarizona Real estate is the least disputed commodity in the ME conflict. The peculiar issue has always been to reconcile a conflict in which one side says \"Let\'s share\" and the other: \"Not even the size of a postage stamp\".",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534715590404845568"),
+        created_at: Some("2022-06-09T07:46:23Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534740996063232000",
+            ),
+        ]),
+    ),
+    (
+        id: "1534752354070765569",
+        text: "@rjherber @memarkelliottme This is because most Jews, even most Jewish organizations, do not insist on correcting the mistake. Some enjoy the ambivalence: pleading \"tolerate us like any other religion\" with their leftist friends, and demanding \"two-states for two peoples\" in international arena.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534715590404845568"),
+        created_at: Some("2022-06-09T04:20:50Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534748478420574209",
+            ),
+        ]),
+    ),
+    (
+        id: "1534749798582038528",
+        text: "If it\'s out of your way, don\'t worry, my acceptance speech will be recorded (in English, Spanish and Hebrew) and made available on this channel. It will focus on the Ladder of Causation and why it helps us understand who we are.\n2/2",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534749797537550338"),
+        created_at: Some("2022-06-09T04:10:40Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534749797537550338",
+            ),
+        ]),
+    ),
+    (
+        id: "1534749797537550338",
+        text: "I will be taking a few days off from Tweeting - need to go to Spain, soon, to pickup the BBVA award I told you about:\nhttps://t.co/rEFImBzKvs\nIf you happen to be at Bilbao, Spain, next Thursday, please drop by the presentation ceremony, 17:30pm at the Euscalduna Conf Center. \n1/2",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534749797537550338"),
+        created_at: Some("2022-06-09T04:10:40Z"),
+    ),
+    (
+        id: "1534730457035571200",
+        text: "@razingarizona @memarkelliottme No, NO. Don\'t get G-d involved. I can do a much better job of explaining. G-d\'s always assume that everybody knows what they are supposed to know. I\'m more tolerant. Besides, most Israelis are secular.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534715590404845568"),
+        created_at: Some("2022-06-09T02:53:49Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534723328631394304",
+            ),
+        ]),
+    ),
+    (
+        id: "1534722032079753216",
+        text: "Some people end here. I don\'t. I continue:\n\"Two states for two peoples,\n Equally legitimate and equally indigenous\"\n\nWhy the second line? Because it is easy to cheat on the 1st, impossible to cheat on the  2nd.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534722030985093122"),
+        created_at: Some("2022-06-09T02:20:20Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534722030985093122",
+            ),
+        ]),
+    ),
+    (
+        id: "1534722030985093122",
+        text: "Glad you brought up this question, because I know that many people  think Jews are a religion, as opposed to a \"people\", bonded by common history, attachment to one land, and common destiny. With this in mind, I hope you join the Jewish aspiration: Two state for two people,\n1/2 https://t.co/uopaiuCDw9",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534722030985093122"),
+        created_at: Some("2022-06-09T02:20:20Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1534719287767617537",
+            ),
+        ]),
+    ),
+    (
+        id: "1534715591352668162",
+        text: "A chapter of history I did not know, though I should have, given the striking similarities to debates that still rock the Halls of US Congress.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534715590404845568"),
+        created_at: Some("2022-06-09T01:54:45Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534715590404845568",
+            ),
+        ]),
+    ),
+    (
+        id: "1534715590404845568",
+        text: "100 Years Ago This Month: When Congress Embraced Zionism—Unanimously https://t.co/uKhFmeeKTV via @jewishjournal",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534715590404845568"),
+        created_at: Some("2022-06-09T01:54:45Z"),
+    ),
+    (
+        id: "1534688250090008577",
+        text: "@AnalytiCringe Your life will change, I\'m sure. Mine was changed twice. First when I discovered I could do things I\'ve always wanted, but didn\'t know how. Then when I discovered that so many folks (eg economists) still don\'t know how, but are afraid to ask.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534597907390705664"),
+        created_at: Some("2022-06-09T00:06:06Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534597907390705664",
+            ),
+        ]),
+    ),
+    (
+        id: "1534623904144076800",
+        text: "@aleixrvr @ccaballeroh10 In Wikipedia I introduced p(y|do(x)) conceptually, not as an operation on graph, but as a distribution created once we make sure X=x is enforced. I believe even high-school kids would understand the difference btwn \"the price listed was X=100\" and \"I raised the price to X=100.\"",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534448073283276801"),
+        created_at: Some("2022-06-08T19:50:25Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534535742185168897",
+            ),
+        ]),
+    ),
+    (
+        id: "1534552554784555010",
+        text: "I felt like this post was coming from a UCLA colleague and is talking directly to me, about me, and about the new plague I have been scheming against the forces of light and goodness. https://t.co/wzFdj1WzSD",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534552554784555010"),
+        created_at: Some("2022-06-08T15:06:54Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1534481981681111041",
+            ),
+        ]),
+    ),
+    (
+        id: "1534546910878388225",
+        text: "The sea that saw the birth of \"thinking\" never ceases to impress us with its depth. https://t.co/z2Bfvol3oZ",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534546910878388225"),
+        created_at: Some("2022-06-08T14:44:28Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1534485580121350145",
+            ),
+        ]),
+    ),
+    (
+        id: "1534544038128283649",
+        text: "Speaking about de-confounding confounding, I recently cleaned up the entry for \"confounding\" on Wikipedia https://t.co/hDSR4uhI6i\nSections: Definition, Control and History are fixed, while the rest were left in their original state of confusion. Hard to fight Wiki editors. https://t.co/V1UyCn8o4B",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534544038128283649"),
+        created_at: Some("2022-06-08T14:33:03Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1534538378942853121",
+            ),
+        ]),
+    ),
+    (
+        id: "1534477232462123009",
+        text: "@aleixrvr From your experience as a \"data scientist\" (who isn\'t?) what did you find to be the most important Causal Inference tool your peers can exploit to benefit?",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534448073283276801"),
+        created_at: Some("2022-06-08T10:07:36Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534476130211835904",
+            ),
+        ]),
+    ),
+    (
+        id: "1534448073283276801",
+        text: "Delighted to welcome a new book on Causal Inference for Data Science, which is based on DAGs, doesn\'t shy from basic issues, and promises to usher data science towards modernity. Looking forward to see an electronic copy. https://t.co/qFTJup5VEW",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534448073283276801"),
+        created_at: Some("2022-06-08T08:11:43Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1533781136538755072",
+            ),
+        ]),
+    ),
+    (
+        id: "1534438738423476224",
+        text: "@stefanharmeling @shalom123211 You are right. This is a simple situation to which Rule 3 applies (to ignore an action) but not the succession of Rule 2 (exchanging action by observation) followed by Rule 1 (ignoring an observation).",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1532571989084282880"),
+        created_at: Some("2022-06-08T07:34:38Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1534428900121628672",
+            ),
+        ]),
+    ),
+    (
+        id: "1534245619870552064",
+        text: "What a song! One would bet it was written yesterday, or at least two weeks ago, when @CNN came out with their Kangaroo verdict as to WHO killed Abu Akleh:\n\n\"His enemies they all chant he\'s killing their journalists,\nHe has nothing better to do, but to kill and to kill.\" https://t.co/VKHnjDQ6s5",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534245619870552064"),
+        created_at: Some("2022-06-07T18:47:15Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1534219317453238275",
+            ),
+        ]),
+    ),
+    (
+        id: "1534130067630006272",
+        text: "As a carrier of a prize given in his honor, I am posting my Alan Turing lecture of 2012: https://t.co/0s8fldZmjs\nThe works of other Turing laurates is described here:https://t.co/olirAhwXkQ. (Click on the photo) https://t.co/agx2cMkWAc",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534130067630006272"),
+        created_at: Some("2022-06-07T11:08:05Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1534115704177315840",
+            ),
+        ]),
+    ),
+    (
+        id: "1534035574771752961",
+        text: "I remember D-Day. No, I wasn\'t on a boat, I was only 8 yr old. But I remember my father rushing home with a newspaper screaming: HaPlisha Hechela (The Invasion Started), and everyone gathered around the newspaper which had a huge headline: Haplisha Hechela. All I knew: it\'s BIG. https://t.co/t854iCQUM0",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1534035574771752961"),
+        created_at: Some("2022-06-07T04:52:36Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1533680899186892800",
+            ),
+        ]),
+    ),
+    (
+        id: "1534010486148038657",
+        text: "@ishapiro @GeorgetownLaw Hard to read the small print. Do you have\na summary of the issue you had at @GeorgetownLaw?",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533818890140229635"),
+        created_at: Some("2022-06-07T03:12:55Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533818890140229635",
+            ),
+        ]),
+    ),
+    (
+        id: "1534000657681637376",
+        text: "@AvivaKlompas @AyaIsleemEn I don\'t understand why everybody is condemning anti-Israel @AyalsleemEn for pretending this olive tree is in Palestine. History is a life-sustaining commodity, like water and oxygen; those who have much of it should share with those who have none.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1532800553062912000"),
+        created_at: Some("2022-06-07T02:33:51Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533324873245855745",
+            ),
+        ]),
+    ),
+    (
+        id: "1533984472298770432",
+        text: "RT @eliasbareinboim: As promised, link to my keynote on the interactive causal learning conf. last week, including my talk + nice Q &amp; A ses…",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533984472298770432"),
+        created_at: Some("2022-06-07T01:29:32Z"),
+        referenced_tweets: Some([
+            (
+                type: retweeted,
+                id: "1533821080049156097",
+            ),
+        ]),
+    ),
+    (
+        id: "1533983531424108544",
+        text: "It should also help our readers disseminate their papers among like-minded researchers and, in some small measure, propagate commonsense among the infidels. \n2/2",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533983530178314240"),
+        created_at: Some("2022-06-07T01:25:48Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533983530178314240",
+            ),
+        ]),
+    ),
+    (
+        id: "1533983530178314240",
+        text: "I am starting a new service on this educational channel: A weekly list (not endorsements) of newly published papers touching on causal inference. First installment: https://t.co/VT5XMP58NY\nI believe it should help readers obtain a panoramic view of where the field is going.\n1/2",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533983530178314240"),
+        created_at: Some("2022-06-07T01:25:48Z"),
+    ),
+    (
+        id: "1533964843643858944",
+        text: "RT @emilykschrader: CHAMPION! Meet Monia, an Israeli Druze teenager from Julis who just won the World Kickboxing World Championship in Buda…",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533964843643858944"),
+        created_at: Some("2022-06-07T00:11:33Z"),
+        referenced_tweets: Some([
+            (
+                type: retweeted,
+                id: "1533813530050568192",
+            ),
+        ]),
+    ),
+    (
+        id: "1533854214392229888",
+        text: "@CureT1Diabetes Thanks, Ellen, I can\'t get enough of them. I\'m in love.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533635115561037824"),
+        created_at: Some("2022-06-06T16:51:57Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533850091571671043",
+            ),
+        ]),
+    ),
+    (
+        id: "1533842738763902976",
+        text: "what forces can be unleashed when you have everything to lose and nowhere else to go. They just don\'t get it. They are brought up on the Crusaders model, and no model of an indigenous nation returning from exile -- there isn\'t any. And no one to warn them of the difference.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533842737258065920"),
+        created_at: Some("2022-06-06T16:06:20Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533842737258065920",
+            ),
+        ]),
+    ),
+    (
+        id: "1533842737258065920",
+        text: "Those of us tuned to Palestinian social media often read serious articles on what ought to be done with the Jews once they overrun Israel. Who will live and who will die, who will be deported and who be allowed to stay, etc. Like in 1967, they are grossly underestimating \n1/2 https://t.co/mB9er80YLk",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533842737258065920"),
+        created_at: Some("2022-06-06T16:06:20Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1533474638017314817",
+            ),
+        ]),
+    ),
+    (
+        id: "1533835539844976642",
+        text: "RT @michaeldickson: He was killed for supporting Israel: Robert F. Kennedy, murdered by a Palestinian terrorist 54 years ago today https://…",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533835539844976642"),
+        created_at: Some("2022-06-06T15:37:44Z"),
+        referenced_tweets: Some([
+            (
+                type: retweeted,
+                id: "1533815666976899073",
+            ),
+        ]),
+    ),
+    (
+        id: "1533830940757094400",
+        text: "@mel_blue @EinatWilf Thanks for the correction.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533628406348124160"),
+        created_at: Some("2022-06-06T15:19:28Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533746012669591553",
+            ),
+        ]),
+    ),
+    (
+        id: "1533773581317853185",
+        text: "@rina31420183 @NYT @DrMichaelOren Good to know. Let\'s see how they celebrate the day that changed the dynamics of the Middle East.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533716562338689024"),
+        created_at: Some("2022-06-06T11:31:32Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533767626823966724",
+            ),
+        ]),
+    ),
+    (
+        id: "1533755331204878336",
+        text: "explicit statement nowadays:\n\n\"Two states for two people,\nequally legitimate and equally indigenous\".\n\nAs I\'ve explained in several tweets before, a commitment to equal indigeneity status is\nof crucial importance, making one\'s commitment to peace truly hard to fake.\n2/2",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533755329057501184"),
+        created_at: Some("2022-06-06T10:19:01Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533755329057501184",
+            ),
+        ]),
+    ),
+    (
+        id: "1533755329057501184",
+        text: "This article is a must for anyone seeking a concise, 3-page history of the Israel-Palestinian conflict:\nhttps://t.co/oXCxb4kTL9\nNote that @DrMichaelOren set the criterion for peace as: Stating that they favor “two states for two peoples”. I think Israelis will demand a more \n1/2 https://t.co/TBoCX1Z32k",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533755329057501184"),
+        created_at: Some("2022-06-06T10:19:00Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1533716562338689024",
+            ),
+        ]),
+    ),
+    (
+        id: "1533716562338689024",
+        text: "I almost fell from my chair in disbelief: Can @NYT  print a piece celebrating 1967? I was about to send a Kudo to @DrMichaelOren, only to discover that it was a 2017 article, not 2022. The content is as relevant today as it was in 2017 but, boy, the @NYT has changed. https://t.co/XFOb7S29zX",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533716562338689024"),
+        created_at: Some("2022-06-06T07:44:58Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1533699279679799297",
+            ),
+        ]),
+    ),
+    (
+        id: "1533710047800225792",
+        text: "@olivier_klein Wrong. These attitudes are as \"ingrained\" as mother milk and morning prayers. I have lived with them since 1936 and 1947, before refugees, before \"occupation\" and before restrictions. Please read R. Khalidi or Said. Why ignore what they are saying? It is ingrained and universal.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533657414913777665"),
+        created_at: Some("2022-06-06T07:19:05Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533702339583950848",
+            ),
+        ]),
+    ),
+    (
+        id: "1533704504813621248",
+        text: "@olivier_klein You can get any result you want from a pole, depending how you phrase the questions. What most Palestinians mean by \"two-states\" is a temporary arrangement for them to prepare for the next assault. You\'d get opposite results asking: Does Israel have the RIGHT to exist. Zero.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533657414913777665"),
+        created_at: Some("2022-06-06T06:57:03Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533702128216199169",
+            ),
+        ]),
+    ),
+    (
+        id: "1533701748006612992",
+        text: "@WahbaRachel @Ostrov_A @bobjcarr There is one difference, of great significance. I don\'t know an antisemite who admits to being one. I don\'t know a Zionophobe who denies being one. They consider it a duty and an honor to deny Jews a homeland.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533649451784491008"),
+        created_at: Some("2022-06-06T06:46:06Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533683241881767936",
+            ),
+        ]),
+    ),
+    (
+        id: "1533677085545287680",
+        text: "@Ostrov_A @bobjcarr Save your questions, Professor @bobjcarr. No one will call you anti-Semitic again. We have a new title for those who make vile allegations of \"apartheid\" and attribute a few racist shouts to 40,000 peaceful dancers. We call them Zionophobes, something they can\'t deny.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533649451784491008"),
+        created_at: Some("2022-06-06T05:08:06Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533649451784491008",
+            ),
+        ]),
+    ),
+    (
+        id: "1533671377315581957",
+        text: "@olivier_klein There is no danger of antagonizing those who don\'t match this description because, and this is the cardinal mistake of most Western observers, analysts and peace makers, the number of exceptions is infinitesimally miniscule. Standing to be corrected, all evidence admissible.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533657414913777665"),
+        created_at: Some("2022-06-06T04:45:25Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533660831686217729",
+            ),
+        ]),
+    ),
+    (
+        id: "1533658727865151489",
+        text: "The West Bank is still under occupation\nbecause since 1936,  Palestinians view \"co-existence\" as a defeat. https://t.co/OoyKY5oaq2",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533658727865151489"),
+        created_at: Some("2022-06-06T03:55:09Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1533633827184250882",
+            ),
+        ]),
+    ),
+    (
+        id: "1533657414913777665",
+        text: "I would put it even stronger,  in present tense: “More than the Palestinians want a state for themselves, they want to destroy and deny a state to the Jewish people.” Moreover, they would rather give up all hope for the former to retain some hope of the latter. https://t.co/REMsgqATEt",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533657414913777665"),
+        created_at: Some("2022-06-06T03:49:56Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1533636992595947520",
+            ),
+        ]),
+    ),
+    (
+        id: "1533635115561037824",
+        text: "What have you done to me? I am listening to Isaac Y Nora again and again https://t.co/JCUpNsDbhb\nI can\'t quit, and I can\'t work. I don\'t want to work, I want to sing with them, more and more!\nVEINTE AÑOS, Caballo Viejo! Que Nadie Sepa Mi Sufrir! Amazing! https://t.co/12G8PPDvw2",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533635115561037824"),
+        created_at: Some("2022-06-06T02:21:19Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1533573151799517184",
+            ),
+        ]),
+    ),
+    (
+        id: "1533628406348124160",
+        text: "June 6th marks 74 years to the 6 day war. Some readers ask: \"how did it start?\" Many more ask: How come the West Bank is still under Israeli Rule? @EinatWilf has a simple answer, with which I fully agree, it\'s a necessary temporary control till the Arabs say: \"Equally permanent\" https://t.co/6sQ5dDtVCL",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533628406348124160"),
+        created_at: Some("2022-06-06T01:54:40Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1533500922260770818",
+            ),
+        ]),
+    ),
+    (
+        id: "1533625351049383937",
+        text: "@KhaledAbuToameh May their forecast of the future match\ntheir knowledge of the past. Amen!",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533495195681148930"),
+        created_at: Some("2022-06-06T01:42:31Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533495195681148930",
+            ),
+        ]),
+    ),
+    (
+        id: "1533622526521114624",
+        text: "RT @romanhistory1: Today 70AD Titus and his Roman legions breach the middle wall of Jerusalem. Titus, a renowned military commander and fut…",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533622526521114624"),
+        created_at: Some("2022-06-06T01:31:18Z"),
+        referenced_tweets: Some([
+            (
+                type: retweeted,
+                id: "1533418356161667072",
+            ),
+        ]),
+    ),
+    (
+        id: "1533621451202625536",
+        text: "RT @DavidHarrisAJC: #OTD in 1967, war erupted in Middle East after bloodcurdling calls for Israel\'s end.\n\nUntil 1967, Egypt occupied Gaza\n&amp;…",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533621451202625536"),
+        created_at: Some("2022-06-06T01:27:01Z"),
+        referenced_tweets: Some([
+            (
+                type: retweeted,
+                id: "1533399203770253312",
+            ),
+        ]),
+    ),
+    (
+        id: "1533592954052300800",
+        text: "@artistexyz @RWJE_BA Gee, I love this song, the music, and this family. I love them so much, that I can\'t see how it is related to EBM, unless EBM no longer stands for Evidence Based Medicine . Is it?",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533131743938719745"),
+        created_at: Some("2022-06-05T23:33:47Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533573151799517184",
+            ),
+        ]),
+    ),
+    (
+        id: "1533553945733304320",
+        text: "@DKedmey @sapinker @Gena_I_Gorlin @DavidDeutschOxf @richard_landes @MattiFriedman @NeilRogachevsky This \"projection project\" is of crucial importance in the fight against Israel delegitimization. Most BDS followers are the gullible and misinformed, who go for \"\'progressives\' cannot all be wrong\". Only a credible explanation of WHY they ARE wrong would sway back the gullible.",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1532581714333028352"),
+        created_at: Some("2022-06-05T20:58:47Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1532842651875254273",
+            ),
+        ]),
+    ),
+    (
+        id: "1533474039464742913",
+        text: "Not bad at all! Reminds me of Omar Khayyam:\n\nHere, with a book of verse beneath the Bough,\nA Jug of Wine, A Loaf of Bread—and Thou\nBeside me singing in the Wilderness—\nOh, Wilderness is a Paradise enow!\n#Bookofwhy https://t.co/Qh4UNGHbzp",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533474039464742913"),
+        created_at: Some("2022-06-05T15:41:16Z"),
+        referenced_tweets: Some([
+            (
+                type: quoted,
+                id: "1533469452221788160",
+            ),
+        ]),
+    ),
+    (
+        id: "1533471735357374464",
+        text: "@databacked101 their sons in the war, nor faces of orphans of fallen Russian soldiers for fear of raising sympathy for Putin is not doing his/her duty as a journalist.\n2/2",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533214351590494208"),
+        created_at: Some("2022-06-05T15:32:06Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533469813053394944",
+            ),
+        ]),
+    ),
+    (
+        id: "1533469813053394944",
+        text: "@databacked101 I love this comparison, because Putin\'s declaration that Ukraine is not a legitimate country matches Palestinian declaration that Israel is not legitimate. But forgetting this parallel, a journalist stationed in Russia and wouldn\'t show faces of Russian mothers who lost \n1/2",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533214351590494208"),
+        created_at: Some("2022-06-05T15:24:28Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533406769187258373",
+            ),
+        ]),
+    ),
+    (
+        id: "1533367698419109888",
+        text: "taking liberty to interpret the story of Ruth in the context of Mt. Sinai I would say: Ruth\'s quote:\n\"your people is my people and your God is my God\" embodies the essence of Judaism. We are people first and religion second. This is also the meaning of Jewishness in Israel.\n2/2",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533367697190158336"),
+        created_at: Some("2022-06-05T08:38:42Z"),
+        referenced_tweets: Some([
+            (
+                type: replied_to,
+                id: "1533367697190158336",
+            ),
+        ]),
+    ),
+    (
+        id: "1533367697190158336",
+        text: "Today is the Jewish holiday of Shavuot, the day the Israelites received the Torah on Mt. Sinai. We also read the Book of Ruth https://t.co/FQE6B6U0e9\n for a variety of reasons: It\'s a story about the harvest time, and it is a story about conversion to Judaism. But for me,\n1/2",
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533367697190158336"),
+        created_at: Some("2022-06-05T08:38:42Z"),
+    ),
+    (
+        id: "1533356523706994688",
+        text: "RT @Ostrov_A: The gorgeous iconic Rothschild Blvd in Tel Aviv, Israel! ☀\u{fe0f} 🇮🇱 🌳 https://t.co/98023hYw5D",
+        attachments: Some((
+            media_keys: Some([
+                "3_1533354739106185216",
+            ]),
+        )),
+        author_id: Some("3363584909"),
+        conversation_id: Some("1533356523706994688"),
+        created_at: Some("2022-06-05T07:54:18Z"),
+        referenced_tweets: Some([
+            (
+                type: retweeted,
+                id: "1533354755107565570",
+            ),
+        ]),
+    ),
+]

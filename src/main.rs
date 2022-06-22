@@ -2,16 +2,17 @@ use iced::pure::widget::{Button, Column, Row, Text};
 use iced::pure::{button, column, container, row, scrollable, text, Application, Element};
 use iced::{alignment, executor, Alignment, Color, Command, Length, Settings};
 use twitter_v2::{Tweet, User};
+use util::SelectList;
 pub mod api;
 pub mod style;
 pub mod theme;
+pub mod util;
 pub fn main() -> iced::Result {
     App::run(Settings::default())
 }
 #[derive(Debug, Clone)]
 struct App {
-    model: Vec<Snapshot>,
-    index: usize,
+    model: SelectList<Snapshot>,
 }
 
 #[derive(Debug, Clone)]
@@ -32,11 +33,6 @@ enum Snapshot {
     ConversationView(Tweet),
 }
 
-fn reset_model_history(model: &mut Vec<Snapshot>, index: usize) -> Vec<Snapshot> {
-    model.truncate(index + 1);
-    model.clone()
-}
-
 impl Application for App {
     type Message = Message;
     type Executor = executor::Default;
@@ -45,10 +41,9 @@ impl Application for App {
     fn new(_flags: ()) -> (Self, Command<Message>) {
         (
             Self {
-                model: vec![Snapshot::UserView(api::get_user_by_twitter_handle(
+                model: SelectList::new(Snapshot::UserView(api::get_user_by_twitter_handle(
                     "yudapearl",
-                ))],
-                index: 0,
+                ))),
             },
             Command::none(),
         )
@@ -65,42 +60,34 @@ impl Application for App {
     fn update(&mut self, message: Message) -> Command<Message> {
         match message {
             Message::DisplayTweet(tweet) => {
-                self.model = reset_model_history(&mut self.model, self.index);
-                self.model.push(Snapshot::TweetView(tweet));
-                self.index += 1;
+                self.model.add(Snapshot::TweetView(tweet));
                 Command::none()
             }
             Message::DisplayUser(user) => {
-                self.model = reset_model_history(&mut self.model, self.index);
-                self.model.push(Snapshot::UserView(user));
-                self.index += 1;
+                self.model.add(Snapshot::UserView(user));
                 Command::none()
             }
             Message::DisplayConversation(tweet) => {
-                self.model = reset_model_history(&mut self.model, self.index);
-                self.model.push(Snapshot::ConversationView(tweet));
-                self.index += 1;
+                self.model.add(Snapshot::ConversationView(tweet));
                 Command::none()
             }
             Message::Home => {
-                self.model = reset_model_history(&mut self.model, self.index);
-                self.model.push(self.model[0].clone());
-                self.index += 1;
+                self.model.add(self.model.previous[0].clone());
                 Command::none()
             }
             Message::Back => {
-                self.index -= 1;
+                self.model.previous();
                 Command::none()
             }
             Message::Forward => {
-                self.index += 1;
+                self.model.forward();
                 Command::none()
             }
         }
     }
 
     fn view(&self) -> Element<Message> {
-        let present = self.model[self.index].clone();
+        let present = &self.model.selected;
         let view_content = match present {
             Snapshot::TweetView(tweet) => render_tweet_view(self, &tweet),
             Snapshot::UserView(user) => render_user_view(self, &user),
@@ -259,9 +246,10 @@ fn view_tweet_title(tweet: &Tweet) -> Text {
 }
 
 fn view_navigation<'a>(app: &App) -> Row<'a, Message> {
-    let is_back_button_active: bool = app.index > 0;
-    let is_forward_button_active: bool = app.index < app.model.len() - 1;
-    let is_home_button_active: bool = app.model[app.index] != app.model[0];
+    let is_back_button_active: bool = app.model.previous.len() > 0;
+    let is_forward_button_active: bool = app.model.next.len() > 0;
+    let is_home_button_active: bool =
+        app.model.previous.len() > 0 && app.model.previous[0] != app.model.selected;
     row()
         .push(view_navigation_button(
             "Back",
