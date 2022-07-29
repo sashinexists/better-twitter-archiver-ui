@@ -1,5 +1,5 @@
 use crate::utils::TweetData;
-use futures::{executor::block_on, future::join_all, stream::FuturesUnordered, StreamExt};
+use futures::future::join_all;
 use sea_orm::DatabaseConnection;
 
 use twitter_v2::{Tweet, User};
@@ -22,6 +22,7 @@ pub async fn load_users_tweets_from_twitter_handle(
         if has_new_tweets(db, twitter_handle).await {
             println!("Adding new tweets");
             let new_tweets = load_users_new_tweets(db, twitter_handle).await;
+            println!("{:?}", &new_tweets);
             data::write::tweets(db, &new_tweets).await;
             TweetData::from_vec_tweet(&user, data::read::users_tweets(db, twitter_handle).await)
         } else {
@@ -58,9 +59,11 @@ pub async fn load_conversation_from_tweet_id(
     tweet_id: i64,
 ) -> Vec<TweetData> {
     let conversation = data::read::conversation(db, tweet_id).await;
-    if &conversation.len() <= &1 {
+    if &conversation.len() > &1 {
+        println!("Loading conversation from Database");
         vec_tweet_data_from_vec_tweet(db, conversation).await
     } else {
+        println!("Loading conversation from Server");
         let conversation = server::get_conversation_by_tweet_id(tweet_id);
         data::write::tweets(db, &conversation).await;
         vec_tweet_data_from_vec_tweet(db, conversation).await
@@ -123,4 +126,8 @@ pub async fn load_users_new_tweets(db: &DatabaseConnection, twitter_handle: &str
         .created_at
         .expect("Failed to get created_at date");
     server::get_users_tweets_since(twitter_handle, &since)
+}
+
+pub async fn search_tweets_in_db(db: &DatabaseConnection, search_query: &str) -> Vec<TweetData> {
+    vec_tweet_data_from_vec_tweet(db, data::read::search_tweets_in_db(db, search_query).await).await
 }

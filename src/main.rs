@@ -1,9 +1,12 @@
 use app::data::setup;
 use iced::futures::executor::block_on;
-use iced::pure::widget::{Button, Column, Row, Text};
-use iced::pure::{button, column, container, row, scrollable, text, Application, Element};
+use iced::pure::widget::{Button, Column, Row, Text, TextInput};
+use iced::pure::{
+    button, column, container, row, scrollable, text, text_input, Application, Element, Widget,
+};
 use iced::{alignment, executor, Alignment, Color, Command, Length, Settings};
 use sea_orm::DatabaseConnection;
+use twitter_v2::oauth2::url::quirks::search;
 use twitter_v2::{Tweet, User};
 use utils::{SelectList, TweetData, UserData};
 
@@ -21,6 +24,7 @@ pub fn main() -> iced::Result {
 struct App {
     model: SelectList<Snapshot>,
     config: Config,
+    search_input: String,
     data: DatabaseConnection,
 }
 
@@ -39,6 +43,8 @@ enum Message {
     Back,
     Forward,
     ViewMoreTweets,
+    SearchInputChanged(String),
+    Search(String),
 }
 
 #[derive(Debug, Clone, PartialEq)]
@@ -46,6 +52,7 @@ enum Snapshot {
     TweetView(TweetData),
     UserView(User, Vec<TweetData>),
     ConversationView(Vec<TweetData>),
+    SearchView(String, Vec<TweetData>),
 }
 
 impl Application for App {
@@ -64,6 +71,7 @@ impl Application for App {
                         USER_TWITTER_HANDLE,
                     )),
                 )),
+                search_input: "".to_string(),
                 config: Config {
                     tweets_per_page: 100,
                 },
@@ -126,6 +134,15 @@ impl Application for App {
                 self.config.tweets_per_page += 50;
                 Command::none()
             }
+            Message::SearchInputChanged(input) => {
+                self.search_input = input;
+                Command::none()
+            }
+            Message::Search(search_query) => {
+                let search = block_on(app::search_tweets_in_db(&self.data, &search_query));
+                self.model.add(Snapshot::SearchView(search_query, search));
+                Command::none()
+            }
         }
     }
 
@@ -135,6 +152,9 @@ impl Application for App {
             Snapshot::TweetView(tweet) => render_tweet_view(self, &tweet),
             Snapshot::UserView(user, tweets) => render_user_timeline_view(self, &user, &tweets),
             Snapshot::ConversationView(tweet) => render_conversation_view(self, tweet),
+            Snapshot::SearchView(search_query, search_results) => {
+                render_search_view(self, search_query, search_results)
+            }
         };
         container(scrollable(
             column()
@@ -191,6 +211,31 @@ fn render_conversation_view<'a>(app: &App, conversation: &Vec<TweetData>) -> Row
                 .push(column().push(view_tweet_title(&conversation[0])))
                 .push(view_navigation(app))
                 .push(view_tweet(&conversation[0]))
+                .spacing(10),
+        )
+    }
+}
+
+fn render_search_view<'a>(
+    app: &App,
+    search_query: &str,
+    search_results: &Vec<TweetData>,
+) -> Row<'a, Message> {
+    let number_of_results = &search_results.len();
+    if &search_results.len() > &0 {
+        row().push(
+            column()
+                .push(view_search_title(number_of_results, &search_query))
+                .push(view_navigation(app))
+                .push(view_tweets(&search_results))
+                .spacing(10),
+        )
+    } else {
+        row().push(
+            column()
+                .push(view_search_title(number_of_results, &search_query))
+                .push(view_navigation(app))
+                .push(text("Sorry, no results found"))
                 .spacing(10),
         )
     }
@@ -258,10 +303,22 @@ fn view_tweets_paginated<'a>(
         .push(
             row()
                 .push(
-                    button("+")
-                        .style(style::MoreTweetsButton)
-                        .width(Length::FillPortion(80))
-                        .on_press(Message::ViewMoreTweets),
+                    column()
+                        .push(
+                            button(
+                                text("+")
+                                    .size(25)
+                                    .horizontal_alignment(iced::alignment::Horizontal::Center)
+                                    .vertical_alignment(iced::alignment::Vertical::Center),
+                            )
+                            .style(style::MoreTweetsButton)
+                            .width(Length::Units(200))
+                            .height(Length::Units(50))
+                            .padding(10)
+                            .on_press(Message::ViewMoreTweets),
+                        )
+                        .width(Length::FillPortion(100))
+                        .align_items(iced::Alignment::Center),
                 )
                 .align_items(iced::Alignment::Center),
         )
@@ -317,22 +374,57 @@ fn view_navigation<'a>(app: &App) -> Row<'a, Message> {
     let is_home_button_active: bool =
         app.model.previous.len() > 0 && app.model.previous[0] != app.model.selected;
     row()
-        .push(view_navigation_button(
-            "Back",
-            Message::Back,
-            is_back_button_active,
-        ))
-        .push(view_navigation_button(
-            "Forward",
-            Message::Forward,
-            is_forward_button_active,
-        ))
-        .push(view_navigation_button(
-            "Home",
-            Message::Home,
-            is_home_button_active,
-        ))
-        .spacing(20)
+        .push(
+            column().push(
+                row()
+                    .push(view_navigation_button(
+                        "Back",
+                        Message::Back,
+                        is_back_button_active,
+                    ))
+                    .push(view_navigation_button(
+                        "Forward",
+                        Message::Forward,
+                        is_forward_button_active,
+                    ))
+                    .push(view_navigation_button(
+                        "Home",
+                        Message::Home,
+                        is_home_button_active,
+                    ))
+                    .spacing(20),
+            ),
+        )
+        .push(column().width(Length::Fill))
+        .push(
+            column()
+                .push(row().push(view_search(&app.search_input)))
+                .align_items(iced::Alignment::End),
+        )
+        .spacing(100)
+}
+
+fn view_search<'a>(search_input: &String) -> TextInput<'a, Message> {
+    text_input(
+        "type to search then press enter",
+        search_input,
+        Message::SearchInputChanged,
+    )
+    .size(15)
+    .width(Length::Units(200))
+    .padding(8)
+    .style(style::SearchBar)
+    .on_submit(Message::Search(search_input.to_string()))
+}
+
+fn view_search_title(number_of_results: &usize, search_query: &str) -> Text {
+    text(format!(
+        "{} Results for search \"{}\"",
+        number_of_results, search_query
+    ))
+    .size(30)
+    .width(Length::Fill)
+    .horizontal_alignment(iced::alignment::Horizontal::Center)
 }
 
 fn view_navigation_button<'a>(

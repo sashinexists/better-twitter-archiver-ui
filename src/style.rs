@@ -1,8 +1,11 @@
 use crate::theme;
 
-use iced::pure::{
-    scrollable,
-    widget::{button, container, scrollable},
+use iced::{
+    pure::{
+        scrollable,
+        widget::{button, container, scrollable, text_input},
+    },
+    TextInput,
 };
 pub struct App;
 
@@ -92,5 +95,39 @@ impl button::StyleSheet for MoreTweetsButton {
             background: theme::BUTTON_BG_COLOR.into(),
             ..self.active()
         }
+    }
+}
+
+pub struct SearchBar;
+
+impl text_input::StyleSheet for SearchBar {
+    fn active(&self) -> iced::text_input::Style {
+        text_input::Style {
+            background: theme::BUTTON_BG_COLOR.into(),
+            border_radius: 10.0,
+            border_width: 0.0,
+            border_color: theme::BUTTON_BG_COLOR.into(),
+        }
+    }
+
+    fn focused(&self) -> iced::text_input::Style {
+        text_input::Style {
+            background: theme::BUTTON_TEXT_INACTIVE_COLOR.into(),
+            border_radius: 10.0,
+            border_width: 0.0,
+            border_color: theme::BUTTON_TEXT_INACTIVE_COLOR.into(),
+        }
+    }
+
+    fn placeholder_color(&self) -> iced::Color {
+        theme::BUTTON_TEXT_INACTIVE_COLOR.into()
+    }
+
+    fn value_color(&self) -> iced::Color {
+        theme::BUTTON_TEXT_COLOR.into()
+    }
+
+    fn selection_color(&self) -> iced::Color {
+        theme::CONTENT_HIGHLIGHT_BG_COLOR.into()
     }
 }

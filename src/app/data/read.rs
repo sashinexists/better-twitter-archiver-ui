@@ -179,3 +179,15 @@ pub async fn latest_tweet_from_user_by_twitter_handle(
         None => None,
     }
 }
+
+pub async fn search_tweets_in_db(db: &DatabaseConnection, search_query: &str) -> Vec<Tweet> {
+    Tweets::find()
+        .filter(tweets::Column::Content.contains(search_query))
+        .order_by_desc(tweets::Column::CreatedAt)
+        .all(db)
+        .await
+        .expect("Failed to run tweet search")
+        .into_iter()
+        .map(|b| b.to_tweet())
+        .collect::<Vec<twitter_v2::Tweet>>()
+}
