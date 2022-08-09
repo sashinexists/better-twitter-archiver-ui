@@ -6,9 +6,11 @@ use time::OffsetDateTime;
 use twitter_v2::{Tweet, User};
 
 use crate::utils;
-const API: &str = API_DEV;
+const API_PROD: &str = "https://judea-pearl-tweets-archive.onrender.com/";
+const API: &str = API_PROD;
+
 //const API_PROD: &str = "https://better-twitter-archiver.onrender.com/";
-const API_DEV: &str = "http://127.0.0.1:8000/";
+//const API_DEV: &str = "http://127.0.0.1:8000/";
 pub fn get_tweets_from_twitter_handle(twitter_handle: &str) -> Vec<Tweet> {
     let resp = reqwest::blocking::get(format!("{API}user/{twitter_handle}/tweets"))
         .expect(&format!("failed to get @{twitter_handle}'s tweets"));

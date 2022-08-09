@@ -6,6 +6,7 @@ use async_recursion::async_recursion;
 use futures::StreamExt;
 
 use sea_orm::{ActiveValue, DatabaseConnection, EntityTrait};
+use twitter_v2::data::ReferencedTweet;
 use twitter_v2::{Tweet, User};
 
 pub async fn tweet(db: &DatabaseConnection, tweet: &Tweet) -> () {
@@ -63,7 +64,7 @@ pub async fn tweet(db: &DatabaseConnection, tweet: &Tweet) -> () {
         ),
     }
 }
-/*
+
 pub async fn tweet_with_reference(db: &DatabaseConnection, tweet: &Tweet) -> () {
     let tweet_id: i64 = tweet
         .id
@@ -128,10 +129,10 @@ pub async fn tweet_with_reference(db: &DatabaseConnection, tweet: &Tweet) -> () 
     let referenced_tweets = tweet.referenced_tweets.clone();
 
     match referenced_tweets {
-        Some(references) => tweet_references(db, tweet_id, references).await,
+        Some(references) => tweet_references(db, tweet_id, references, author_id).await,
         None => println!("No referenced tweets"),
     }
-}*/
+}
 
 pub async fn tweets(db: &DatabaseConnection, tweets: &Vec<Tweet>) -> () {
     let tweet_stream = futures::stream::iter(tweets.iter());
@@ -192,11 +193,12 @@ pub async fn tweet_reference(
         ),
     }
 }
-/*
+
 pub async fn tweet_references(
     db: &DatabaseConnection,
     tweet_id: i64,
     tweet_references: Vec<ReferencedTweet>,
+    user_id: i64,
 ) -> () {
     let tweet_reference_stream = futures::stream::iter(tweet_references.iter());
     tweet_reference_stream
@@ -204,8 +206,7 @@ pub async fn tweet_references(
             let tweet_reference_data =
                 TweetReferenceData::from_referenced_tweet(tweet_id, tweet_ref);
 
-            tweet_reference(db, tweet_reference_data).await
+            tweet_reference(db, tweet_reference_data, user_id).await
         })
         .await;
 }
-*/

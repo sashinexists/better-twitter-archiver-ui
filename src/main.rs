@@ -45,6 +45,7 @@ enum Message {
     ViewMoreTweets,
     SearchInputChanged(String),
     Search(String),
+    SeedConversations,
 }
 
 #[derive(Debug, Clone, PartialEq)]
@@ -143,6 +144,19 @@ impl Application for App {
                 self.model.add(Snapshot::SearchView(search_query, search));
                 Command::none()
             }
+            Message::SeedConversations => {
+                let users_tweets = block_on(app::load_users_tweets_from_twitter_handle(
+                    &self.data,
+                    "yudapearl",
+                ));
+                println!("seeding conversations...");
+                block_on(app::seed_conversation_from_tweets(
+                    &self.data,
+                    &users_tweets,
+                ));
+                //self.model.add(Snapshot::UserView(user, users_tweets));
+                Command::none()
+            }
         }
     }
 
@@ -235,7 +249,12 @@ fn render_search_view<'a>(
             column()
                 .push(view_search_title(number_of_results, &search_query))
                 .push(view_navigation(app))
-                .push(text("Sorry, no results found"))
+                .push(
+                    text("Sorry, no results found")
+                        .horizontal_alignment(iced::alignment::Horizontal::Center)
+                        .width(Length::Fill)
+                        .size(20),
+                )
                 .spacing(10),
         )
     }
@@ -392,6 +411,11 @@ fn view_navigation<'a>(app: &App) -> Row<'a, Message> {
                         Message::Home,
                         is_home_button_active,
                     ))
+                    .push(view_navigation_button(
+                        "Seed",
+                        Message::SeedConversations,
+                        true,
+                    ))
                     .spacing(20),
             ),
         )
@@ -419,7 +443,7 @@ fn view_search<'a>(search_input: &String) -> TextInput<'a, Message> {
 
 fn view_search_title(number_of_results: &usize, search_query: &str) -> Text {
     text(format!(
-        "{} Results for search \"{}\"",
+        "{} results for search: \"{}\"",
         number_of_results, search_query
     ))
     .size(30)

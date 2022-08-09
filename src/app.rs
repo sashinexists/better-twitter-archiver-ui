@@ -1,5 +1,5 @@
-use crate::utils::TweetData;
-use futures::future::join_all;
+use crate::{app::data::write::tweet, utils::TweetData};
+use futures::{executor::block_on, future::join_all};
 use sea_orm::DatabaseConnection;
 
 use twitter_v2::{Tweet, User};
@@ -36,6 +36,7 @@ pub async fn load_user_from_id(db: &DatabaseConnection, id: i64) -> User {
     match data::read::user_by_id(db, id).await {
         Some(user) => user,
         None => {
+            println!("Loading user of ID {} from the server", id);
             let user = server::get_user_by_id(id.try_into().expect("Failed to parse i64 from u64"));
             data::write::user(db, &user).await;
             user
@@ -47,6 +48,7 @@ pub async fn load_user_from_twitter_handle(db: &DatabaseConnection, twitter_hand
     match data::read::user_by_twitter_handle(db, twitter_handle).await {
         Some(user) => user,
         None => {
+            println!("Loading user @{} from the server", twitter_handle);
             let user = server::get_user_by_twitter_handle(twitter_handle);
             data::write::user(db, &user).await;
             user
@@ -60,10 +62,16 @@ pub async fn load_conversation_from_tweet_id(
 ) -> Vec<TweetData> {
     let conversation = data::read::conversation(db, tweet_id).await;
     if &conversation.len() > &1 {
-        println!("Loading conversation from Database");
+        println!(
+            "Loading conversation starting with tweet {} from Database",
+            tweet_id
+        );
         vec_tweet_data_from_vec_tweet(db, conversation).await
     } else {
-        println!("Loading conversation from Server");
+        println!(
+            "Loading conversation starting with tweet {} from Server",
+            tweet_id
+        );
         let conversation = server::get_conversation_by_tweet_id(tweet_id);
         data::write::tweets(db, &conversation).await;
         vec_tweet_data_from_vec_tweet(db, conversation).await
@@ -130,4 +138,24 @@ pub async fn load_users_new_tweets(db: &DatabaseConnection, twitter_handle: &str
 
 pub async fn search_tweets_in_db(db: &DatabaseConnection, search_query: &str) -> Vec<TweetData> {
     vec_tweet_data_from_vec_tweet(db, data::read::search_tweets_in_db(db, search_query).await).await
+}
+
+pub async fn seed_conversation_from_tweets(db: &DatabaseConnection, tweets: &Vec<TweetData>) {
+    let conversations: Vec<Vec<Tweet>> = tweets
+        .iter()
+        .map(|tweet_data| {
+            server::get_conversation_by_tweet_id(
+                tweet_data
+                    .tweet
+                    .id
+                    .as_u64()
+                    .try_into()
+                    .expect("Failed to parse i64 from u64"),
+            )
+        })
+        .collect();
+    let future_conversations = join_all(conversations.into_iter().map(|conversation| async move {
+        data::write::tweets(db, &conversation).await;
+    }));
+    future_conversations.await;
 }
