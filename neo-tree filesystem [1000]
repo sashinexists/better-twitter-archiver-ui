@@ -1,0 +1,20 @@
+ ~/ドキュメント/projects/better-twitter-archiver-ui 
+   data 
+   src 
+  │  api 
+  │  app 
+  │  app.rs 
+  │  main.rs                                                                ✗ 
+  │  seed.rs                                                                 ★ 
+  │  style.rs 
+  │  theme.rs 
+  └  utils.rs 
+   target 
+   Cargo.lock 
+   Cargo.toml 
+   tweets.backup.db 
+   tweets.db 
+   tweets.db-shm                                                            ✗ 
+   tweets.db-wal                                                            ✗ 
+   zcc 
+  (3 hidden items) 

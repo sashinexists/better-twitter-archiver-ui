@@ -1,7 +1,7 @@
 use crate::{app::data::write::tweet, utils::TweetData};
 use futures::{executor::block_on, future::join_all};
 use sea_orm::DatabaseConnection;
-
+use super::seed;
 use twitter_v2::{Tweet, User};
 
 pub mod data;
@@ -11,6 +11,12 @@ pub async fn load_users_tweets_from_twitter_handle(
     db: &DatabaseConnection,
     twitter_handle: &str,
 ) -> Vec<TweetData> {
+    // {
+    //     let user = load_user_from_twitter_handle(db, twitter_handle).await;
+    //     seed::all_tweets(db, user.id.as_u64().try_into().expect("Failed to parse u64 to i64")).await;
+    //     let tweets = data::read::tweets(db).await;
+    //     TweetData::from_vec_tweet(&user, tweets)
+    // }
     let user = load_user_from_twitter_handle(db, twitter_handle).await;
     let user_tweets = data::read::users_tweets(db, twitter_handle).await;
     //need something better
@@ -106,14 +112,21 @@ pub async fn vec_tweet_data_from_vec_tweet(
     future_tweets.await
 }
 
-pub async fn load_tweet_from_id(db: &DatabaseConnection, tweet_id: i64, user_id: i64) -> TweetData {
+pub async fn load_tweet_from_id(db: &DatabaseConnection, tweet_id: i64, user_id: i64) -> Option<TweetData> {
     let user = load_user_from_id(db, user_id).await;
     match data::read::tweet_by_id(db, tweet_id).await {
-        Some(tweet) => TweetData::new(&user, tweet),
+        Some(tweet) => Some(TweetData::new(&user, tweet)),
         None => {
-            let tweet = server::get_tweet_by_id(tweet_id);
-            data::write::tweet(db, &tweet).await;
-            TweetData::new(&user, tweet)
+            match server::get_tweet_by_id(tweet_id){
+                Some(tweet)=>{
+                    data::write::tweet(db, &tweet).await;
+                    Some(TweetData::new(&user, tweet))
+                },
+                None => {
+                    println!("Error, very likely this tweet was deleted");
+                    None
+                }
+            }
         }
     }
 }

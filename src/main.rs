@@ -14,7 +14,7 @@ pub mod app;
 pub mod style;
 pub mod theme;
 pub mod utils;
-
+pub mod seed;
 const USER_TWITTER_HANDLE: &str = "yudapearl";
 
 pub fn main() -> iced::Result {
